@@ -1,0 +1,30 @@
+{
+  "lines": [
+    {
+      "speaker": "Mr. ?",
+      "text": "Welcome! What can I get for you tonight?",
+      "choices": [
+        {
+          "text": "Something warm",
+          "nextLineIndex": 1,
+          "flag": "wantsWarm"
+        },
+        {
+          "text": "Something sweet",
+          "nextLineIndex": 2,
+          "flag": "wantsSweet"
+        }
+      ]
+    },
+    {
+      "speaker": "Mr. ?",
+      "text": "Alright, one warm drink coming up!",
+      "choices": []
+    },
+    {
+      "speaker": "Mr. ?",
+      "text": "Sweet it is. I hope you like it!",
+      "choices": []
+    }
+  ]
+}
