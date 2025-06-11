@@ -5,6 +5,7 @@ public class DialogueLine
 {
     public string speaker;
     public string text;
+    public bool nextLineIndex;
     public List<DialogueChoice> choices;
 }
 

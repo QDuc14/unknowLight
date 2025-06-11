@@ -23,9 +23,16 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (dialogueFile.lines[currentLineIndex].choices != null && dialogueFile.lines[currentLineIndex].choices.Count == 0 && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (dialogueFile.lines[currentLineIndex].choices != null && dialogueFile.lines[currentLineIndex].choices.Count == 0 
+            && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame
+            && dialogueFile.lines[currentLineIndex].nextLineIndex)
         {
             OnChoiceSelected(currentLineIndex + 1);
+        }
+        else if (!dialogueFile.lines[currentLineIndex].nextLineIndex
+            && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            EndDialogue();
         }
     }
 

@@ -3,6 +3,7 @@
     {
       "speaker": "Mr. ?",
       "text": "Welcome! What can I get for you tonight?",
+      "nextLineIndex": true,
       "choices": [
         {
           "text": "Something warm",
@@ -19,11 +20,13 @@
     {
       "speaker": "Mr. ?",
       "text": "Alright, one warm drink coming up!",
+      "nextLineIndex": false,
       "choices": []
     },
     {
       "speaker": "Mr. ?",
       "text": "Sweet it is. I hope you like it!",
+      "nextLineIndex": true,
       "choices": []
     }
   ]
