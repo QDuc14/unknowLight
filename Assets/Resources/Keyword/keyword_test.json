@@ -1,0 +1,40 @@
+{
+  "keywords": [
+    {
+      "id": "blackCoffee",
+      "display": "Black Coffee",
+      "description": "A hot drink that fuels the night.",
+      "action": "ShowTooltip"
+    },
+    {
+      "id": "tea",
+      "display": "Tea",
+      "description": "A soothing beverage to warm your soul.",
+      "action": "ShowTooltip"
+    },
+    {
+      "id": "cake",
+      "display": "Cake",
+      "description": "A sweet treat to satisfy your cravings.",
+      "action": "ShowTooltip"
+    },
+    {
+      "id": "cookie",
+      "display": "Cookie",
+      "description": "A delightful snack to enjoy with your drink.",
+      "action": "ShowTooltip"
+    },
+    {
+      "id": "sandwich",
+      "display": "Sandwich",
+      "description": "A hearty meal to fill your stomach.",
+      "action": "ShowTooltip"
+    },
+    {
+      "id": "soup",
+      "display": "Soup",
+      "description": "A warm bowl of comfort for chilly nights.",
+      "action": "ShowTooltip"
+    }
+  ]
+}

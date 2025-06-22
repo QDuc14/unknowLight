@@ -23,23 +23,57 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (dialogueFile.lines[currentLineIndex].choices != null && dialogueFile.lines[currentLineIndex].choices.Count == 0 
-            && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame
-            && dialogueFile.lines[currentLineIndex].nextLineIndex)
-        {
-            OnChoiceSelected(currentLineIndex + 1);
-        }
-        else if (!dialogueFile.lines[currentLineIndex].nextLineIndex
-            && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            EndDialogue();
-        }
+        HandleDialougeSystem();
     }
 
     void LoadDialogue(string path)
     {
         TextAsset jsonText = Resources.Load<TextAsset>(path);
         dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text);
+    }
+
+    private void HandleDialougeSystem()
+    {
+        DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
+
+        // Check if mouse is over a TMP link before advancing
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            // Use null for Canvas in Screen Space - Overlay mode
+            int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
+            if (linkIndex != -1)
+            {
+                Debug.Log("Clicked a hightlight word. Dialogue will not advance.");
+                return;
+            }
+
+            // No choices, normal flow
+            if (currentLine.choices != null && currentLine.choices.Count == 0 && currentLine.nextLineIndex >= 0)
+            {
+                OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
+                return;
+            }
+
+            // End condition
+            if (currentLine.nextLineIndex < 0)
+            {
+                EndDialogue();
+                return;
+            }
+        }
+    }
+
+    void OnChoiceSelected(int nextLineIndex)
+    {
+        if (nextLineIndex > 0 && nextLineIndex < dialogueFile.lines.Count)
+        {
+            currentLineIndex = nextLineIndex;
+            DisplayLine();
+        }
+        else
+        {
+            EndDialogue();
+        }
     }
 
     void DisplayLine()
@@ -65,20 +99,6 @@ public class DialogueManager : MonoBehaviour
                 Button btn = choiceObj.GetComponent<Button>();
                 btn.onClick.AddListener(() => OnChoiceSelected(choice.nextLineIndex));
             }
-        }
-    }
-
-
-    void OnChoiceSelected(int nextIndex)
-    {
-        if (nextIndex > 0 && nextIndex < dialogueFile.lines.Count)
-        {
-            currentLineIndex = nextIndex;
-            DisplayLine();
-        }
-        else
-        {
-            EndDialogue();
         }
     }
 

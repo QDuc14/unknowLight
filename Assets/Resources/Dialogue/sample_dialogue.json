@@ -1,32 +1,21 @@
 {
   "lines": [
     {
-      "speaker": "Mr. ?",
-      "text": "Welcome! What can I get for you tonight?",
-      "nextLineIndex": true,
-      "choices": [
-        {
-          "text": "Something warm",
-          "nextLineIndex": 1,
-          "flag": "wantsWarm"
-        },
-        {
-          "text": "Something sweet",
-          "nextLineIndex": 2,
-          "flag": "wantsSweet"
-        }
-      ]
-    },
-    {
-      "speaker": "Mr. ?",
-      "text": "Alright, one warm drink coming up!",
-      "nextLineIndex": false,
+      "speaker": "The men",
+      "text": "This place feels really cozy.",
+      "nextLineIndex": 1,
       "choices": []
     },
     {
-      "speaker": "Mr. ?",
-      "text": "Sweet it is. I hope you like it!",
-      "nextLineIndex": true,
+      "speaker": "The men ",
+      "text": "I'll have a <link=\"blackCoffee\"><color=yellow><u>black coffee</u></color></link>, please.",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "I told you I would never work with the police again. <br>I don't want anything to do with your 'justice' anymore.",
+      "nextLineIndex": 1,
       "choices": []
     }
   ]
