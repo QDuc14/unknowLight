@@ -1,15 +1,17 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class ClickableText : MonoBehaviour
 {
     private TMP_Text textMesh;
+    private Dictionary<string, KeywordData> keywordLookup;
 
     void Awake()
     {
         textMesh = GetComponent<TMP_Text>();
+        LoadKeywordDatabase();
     }
 
     void Update()
@@ -17,26 +19,47 @@ public class ClickableText : MonoBehaviour
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMesh, Mouse.current.position.ReadValue(), null);
+            Debug.Log("Link index: " + linkIndex);
+
             if (linkIndex != -1)
             {
                 TMP_LinkInfo linkInfo = textMesh.textInfo.linkInfo[linkIndex];
                 string clickedID = linkInfo.GetLinkID();
-                Debug.Log($"Clicked on: {clickedID}");
+                Debug.Log("✅ Clicked on keyword: " + clickedID);
 
-                // Handle the clicked word (based on ID)
                 OnWordClicked(clickedID);
             }
         }
     }
 
-    void OnWordClicked(string id)
+    void LoadKeywordDatabase()
     {
-        var keyword = KeywordManager.Instance.GetKeyword(id);
-        if (keyword == null)
+        TextAsset json = Resources.Load<TextAsset>("Keyword/keyword_test"); // Adjust if needed
+        if (json == null)
         {
-            Debug.LogWarning($"No keyword entry found for: {id}");
+            Debug.LogError("❌ Keyword JSON not found at Resources/Keyword/keyword_test.json");
             return;
         }
+
+        KeywordDatabase db = JsonUtility.FromJson<KeywordDatabase>(json.text);
+        keywordLookup = new Dictionary<string, KeywordData>();
+        foreach (var keyword in db.keywords)
+        {
+            keywordLookup[keyword.id] = keyword;
+        }
+
+        Debug.Log($"✅ Loaded {keywordLookup.Count} keywords.");
+    }
+
+    void OnWordClicked(string id)
+    {
+        if (!keywordLookup.ContainsKey(id))
+        {
+            Debug.LogWarning($"⚠️ No keyword entry found for: {id}");
+            return;
+        }
+
+        KeywordData keyword = keywordLookup[id];
 
         switch (keyword.action)
         {
@@ -54,11 +77,11 @@ public class ClickableText : MonoBehaviour
 
     void ShowProfile(KeywordData data)
     {
-        Debug.Log($"Profile: {data.display}\n{data.description}");
+        Debug.Log($"📘 Profile: {data.display}\n{data.description}");
     }
 
     void ShowTooltip(KeywordData data)
     {
-        Debug.Log($"Tooltip: {data.description}");
+        Debug.Log($"💬 Tooltip: {data.description}");
     }
 }
