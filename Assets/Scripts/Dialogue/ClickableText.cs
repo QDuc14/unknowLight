@@ -19,7 +19,6 @@ public class ClickableText : MonoBehaviour
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMesh, Mouse.current.position.ReadValue(), null);
-            Debug.Log("Link index: " + linkIndex);
 
             if (linkIndex != -1)
             {

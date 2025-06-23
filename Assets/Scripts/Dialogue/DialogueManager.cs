@@ -43,18 +43,15 @@ public class DialogueManager : MonoBehaviour
             int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
             if (linkIndex != -1)
             {
-                Debug.Log("Clicked a hightlight word. Dialogue will not advance.");
                 return;
             }
 
-            // No choices, normal flow
-            if (currentLine.choices != null && currentLine.choices.Count == 0 && currentLine.nextLineIndex >= 0)
+            if (currentLine.choices != null && currentLine.nextLineIndex >= 0)
             {
                 OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
                 return;
             }
 
-            // End condition
             if (currentLine.nextLineIndex < 0)
             {
                 EndDialogue();
