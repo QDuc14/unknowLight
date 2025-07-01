@@ -65,8 +65,8 @@ public class ClickableText : MonoBehaviour
             case "ShowProfile":
                 ShowProfile(keyword);
                 break;
-            case "ShowTooltip":
-                ShowTooltip(keyword);
+            case "ShowDetail":
+                ShowDetail(keyword);
                 break;
             default:
                 Debug.Log($"Keyword clicked: {keyword.display}");
@@ -79,7 +79,7 @@ public class ClickableText : MonoBehaviour
         Debug.Log($"📘 Profile: {data.display}\n{data.description}");
     }
 
-    void ShowTooltip(KeywordData data)
+    void ShowDetail(KeywordData data)
     {
         Debug.Log($"💬 Tooltip: {data.description}");
     }

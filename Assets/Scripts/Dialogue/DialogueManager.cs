@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        LoadDialogue("Dialogue/sample_dialogue");
+        LoadDialogue("Dialogue/mapDialouge");
         DisplayLine();
     }
 

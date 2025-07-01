@@ -1,20 +1,74 @@
 {
   "lines": [
     {
-      "speaker": "The men",
-      "text": "This place feels really cozy.",
-      "nextLineIndex": 1,
-      "choices": []
-    },
-    {
-      "speaker": "The men ",
-      "text": "I'll have a <link=\"blackCoffee\"><color=yellow><u>black coffee</u></color></link>, please.",
+      "speaker": "Lor",
+      "text": "<i>It’s raining outside, huh.</i>",
       "nextLineIndex": 1,
       "choices": []
     },
     {
       "speaker": "Lor",
-      "text": "I told you I would never work with the police again. <br>I don't want anything to do with your 'justice' anymore.",
+      "text": "<i>Today feels dull and plain, just like any other day.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>Not that I hate it. I’ve always expected days like this ever since I decided to open this bar.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>Still, why does it feel like my heart isn’t at peace?</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>I chose this life, and yet, deep down, I find myself yearning for something I can’t quite name.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>A man with a sharp mind and logical thinking like me, and I still can’t understand myself sometimes. How ironic.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>If she were still here, I bet she’d instantly know what I’m thinking and what I’m looking for. She always did.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>The last customer left an hour ago. So there’s no need to rush.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>People on this little street often come to my bar — not just for the drinks, but because most of them have a favor to ask.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>No matter how many times I say I don’t want to be called a detective anymore, they still trust their ‘Detective Lor’ to help.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>But seeing how happy and relieved they look afterward, the way they sincerely thank me — it does feel kinda nice.</i>",
+      "nextLineIndex": 1,
+      "choices": []
+    },
+    {
+      "speaker": "Lor",
+      "text": "<i>I just can’t turn away good people trying to survive in this suffocating, chaotic city.</i>",
       "nextLineIndex": 1,
       "choices": []
     }
