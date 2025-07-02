@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        HandleDialougeSystem();
+        //HandleDialougeSystem();
     }
 
     void LoadDialogue(string path)
@@ -32,31 +32,28 @@ public class DialogueManager : MonoBehaviour
         dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text);
     }
 
-    private void HandleDialougeSystem()
+    public void HandleDialougeSystem()
     {
         DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
 
         // Check if mouse is over a TMP link before advancing
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        // Use null for Canvas in Screen Space - Overlay mode
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
+        if (linkIndex != -1)
         {
-            // Use null for Canvas in Screen Space - Overlay mode
-            int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
-            if (linkIndex != -1)
-            {
-                return;
-            }
+            return;
+        }
 
-            if (currentLine.choices != null && currentLine.nextLineIndex >= 0)
-            {
-                OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
-                return;
-            }
+        if (currentLine.choices != null && currentLine.nextLineIndex >= 0)
+        {
+            OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
+            return;
+        }
 
-            if (currentLine.nextLineIndex < 0)
-            {
-                EndDialogue();
-                return;
-            }
+        if (currentLine.nextLineIndex < 0)
+        {
+            EndDialogue();
+            return;
         }
     }
 

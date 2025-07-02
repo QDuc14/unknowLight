@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1423054443956975267}
   - component: {fileID: 2431160601803303823}
   - component: {fileID: 5808311309335743810}
+  - component: {fileID: 5018439357336398137}
   m_Layer: 5
   m_Name: DialogueText
   m_TagString: Untagged
@@ -285,6 +286,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5abf503aaa1a9f41acdc8cc9c3b42e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5018439357336398137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732381852513427518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2124160544781708929}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: HandleDialougeSystem
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5808311309335743810}
+          m_TargetAssemblyTypeName: ClickableText, Assembly-CSharp
+          m_MethodName: KeyWordOnPressed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5837694905264151928
 GameObject:
   m_ObjectHideFlags: 0

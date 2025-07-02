@@ -16,18 +16,32 @@ public class ClickableText : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        //if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        //{
+        //    int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMesh, Mouse.current.position.ReadValue(), null);
+
+        //    if (linkIndex != -1)
+        //    {
+        //        TMP_LinkInfo linkInfo = textMesh.textInfo.linkInfo[linkIndex];
+        //        string clickedID = linkInfo.GetLinkID();
+        //        Debug.Log("✅ Clicked on keyword: " + clickedID);
+
+        //        OnWordClicked(clickedID);
+        //    }
+        //}
+    }
+
+    public void KeyWordOnPressed()
+    {
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMesh, Mouse.current.position.ReadValue(), null);
+
+        if (linkIndex != -1)
         {
-            int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMesh, Mouse.current.position.ReadValue(), null);
+            TMP_LinkInfo linkInfo = textMesh.textInfo.linkInfo[linkIndex];
+            string clickedID = linkInfo.GetLinkID();
+            Debug.Log("✅ Clicked on keyword: " + clickedID);
 
-            if (linkIndex != -1)
-            {
-                TMP_LinkInfo linkInfo = textMesh.textInfo.linkInfo[linkIndex];
-                string clickedID = linkInfo.GetLinkID();
-                Debug.Log("✅ Clicked on keyword: " + clickedID);
-
-                OnWordClicked(clickedID);
-            }
+            OnWordClicked(clickedID);
         }
     }
 
