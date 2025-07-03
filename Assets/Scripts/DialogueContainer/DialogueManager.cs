@@ -28,8 +28,8 @@ public class DialogueManager : MonoBehaviour
 
     void LoadDialogue(string path)
     {
-        TextAsset jsonText = Resources.Load<TextAsset>(path);
-        dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text);
+        TextAsset jsonText = Resources.Load<TextAsset>(path); // TextAsset is a Unity type used to store text data, such as .txt, .json, or .csv files.
+        dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text); // jsonText.text retrieves the entire text content of the file as a string, ready for parsing.
     }
 
     public void HandleDialougeSystem()
@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
             foreach (DialogueChoice choice in line.choices)
             {
                 GameObject choiceObj = Instantiate(choiceButtonPrefab, choicesContainer);
-                TextMeshProUGUI btnText = choiceObj.GetComponentInChildren<TextMeshProUGUI>();
+                TextMeshProUGUI btnText = choiceObj.GetComponentInChildren<TextMeshProUGUI>(); // Search choiceObj and all its children, and return the first TextMeshProUGUI component you find.
                 btnText.text = choice.text;
 
                 Button btn = choiceObj.GetComponent<Button>();
