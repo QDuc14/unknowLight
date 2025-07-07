@@ -3,7 +3,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DialogueLine
 {
-    public string speaker;
+    public string characterId;
     public string text;
     public int nextLineIndex;
     public List<DialogueChoice> choices;

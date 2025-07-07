@@ -1,0 +1,24 @@
+{
+  "characterNameText": [
+    {
+      "id": "lor",
+      "name": "Lor",
+      "images": [
+        {
+          "id": "00",
+          "path": "Assets/Resources/Art/Character/Lor/Lor_Happy.png"
+        }
+      ]
+    },
+    {
+      "id": "theMan",
+      "name": "The Man",
+      "images": [
+        {
+          "id": "00",
+          "path": "Assets/Resources/Art/Character/unknow/The_Man.png"
+        }
+      ]
+    }
+  ]
+}

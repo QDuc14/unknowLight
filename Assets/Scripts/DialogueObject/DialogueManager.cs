@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI speakerNameText;
+    public TextMeshProUGUI characterNameText;
     public TextMeshProUGUI dialogueText;
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
@@ -78,7 +78,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueLine line = dialogueFile.lines[currentLineIndex];
-        speakerNameText.text = line.speaker;
+        characterNameText.text = line.characterId;
         dialogueText.text = line.text;
 
         if (line.choices != null && line.choices.Count > 0)
@@ -97,7 +97,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        speakerNameText.text = "";
+        characterNameText.text = "";
         dialogueText.text = "The End.";
         foreach (Transform child in choicesContainer)
         {
