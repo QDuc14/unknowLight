@@ -47,7 +47,7 @@ public class ClickableText : MonoBehaviour
 
     void LoadKeywordDatabase()
     {
-        TextAsset json = Resources.Load<TextAsset>("Keyword/keyword_test"); // Adjust if needed
+        TextAsset json = Resources.Load<TextAsset>("_DataSource/keyword_test"); // Adjust if needed
         if (json == null)
         {
             Debug.LogError("❌ Keyword JSON not found at Resources/Keyword/keyword_test.json");

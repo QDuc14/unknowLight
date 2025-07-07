@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &74261329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1985450174927518978, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+  m_PrefabInstance: {fileID: 176943440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &176943440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,6 +146,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 2124160544781708929, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: characterNameText
+      value: 
+      objectReference: {fileID: 74261329}
     - target: {fileID: 2347233360788691764, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00048828125
@@ -185,6 +200,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4610045873909318252, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371093594387342292, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371093594387342292, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371093594387342292, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371093594387342292, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5931975558743411168, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}

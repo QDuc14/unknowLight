@@ -2,18 +2,21 @@
   "lines": [
     {
       "characterId": "theMen",
+      "characterImageId": "00",
       "text": "This place feels really cozy.",
       "nextLineIndex": 1,
       "choices": []
     },
     {
       "characterId": "theMen ",
+      "characterImageId": "00",
       "text": "I'll have a <link=\"blackCoffee\"><color=yellow><u>black coffee</u></color></link>, please.",
       "nextLineIndex": 1,
       "choices": []
     },
     {
       "characterId": "lor",
+      "characterImageId": "00",
       "text": "I told you I would never work with the police again. <br>I don't want anything to do with your 'justice' anymore.",
       "nextLineIndex": 1,
       "choices": []

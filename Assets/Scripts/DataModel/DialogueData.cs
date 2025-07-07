@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class DialogueLine
 {
     public string characterId;
+    public string characterImageId;
     public string text;
     public int nextLineIndex;
     public List<DialogueChoice> choices;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 [System.Serializable]
 public class CharacterData
 {
@@ -15,5 +16,5 @@ public class AvatarImage
 [System.Serializable]
 public class CharacterDatabase
 {
-    public List<DialogueLine> lines;
+    public List<CharacterData> characters;
 }

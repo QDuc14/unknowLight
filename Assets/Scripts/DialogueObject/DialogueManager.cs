@@ -1,7 +1,8 @@
-using UnityEngine;
+using System.Collections.Generic;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class DialogueManager : MonoBehaviour
     private DialogueFile dialogueFile;
     private int currentLineIndex = 0;
 
+    private Dictionary<string, CharacterData> characterData;
 
     void Start()
     {
         LoadDialogue("Dialogue/mapDialouge");
+        LoadData("_DataSource/character_data");
         DisplayLine();
     }
 
@@ -24,13 +27,25 @@ public class DialogueManager : MonoBehaviour
     {
         //HandleDialougeSystem();
     }
-
     void LoadDialogue(string path)
     {
         TextAsset jsonText = Resources.Load<TextAsset>(path); // TextAsset is a Unity type used to store text data, such as .txt, .json, or .csv files.
         dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text); // jsonText.text retrieves the entire text content of the file as a string, ready for parsing.
     }
-
+    void LoadData(string characterDataPath)
+    {
+        LoadCharacterData(characterDataPath); // Load character data from the specified path.
+    }
+    void LoadCharacterData(string path)
+    {
+        TextAsset characterJson = Resources.Load<TextAsset>(path);
+        CharacterDatabase characterDb = JsonUtility.FromJson<CharacterDatabase>(characterJson.text);
+        characterData = new Dictionary<string, CharacterData>();
+        foreach (var character in characterDb.characters)
+        {
+            characterData[character.id] = character;
+        }
+    }
     public void HandleDialougeSystem()
     {
         DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
