@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         LoadDialogue("Dialogue/mapDialouge");
         LoadData("_DataSource/character_data");
         DisplayLine();
@@ -45,6 +46,7 @@ public class DialogueManager : MonoBehaviour
         {
             characterData[character.id] = character;
         }
+        Debug.Log(characterData["lor"].images[0].path);
     }
     public void HandleDialougeSystem()
     {
