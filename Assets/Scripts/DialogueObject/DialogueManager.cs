@@ -93,8 +93,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueLine line = dialogueFile.lines[currentLineIndex];
-        characterNameText.text = line.characterId;
         dialogueText.text = line.text;
+
+        if (characterData.ContainsKey(line.characterId))
+        {
+            CharacterData character = characterData[line.characterId]; // Get the character name from the characterData dictionary using the characterId from the line.
+            characterNameText.text = character.name;
+        }
+        else
+        {
+            characterNameText.text = "Unknown Character"; // Fallback if characterId is not found.
+        }
 
         if (line.choices != null && line.choices.Count > 0)
         {
