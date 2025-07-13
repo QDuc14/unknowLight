@@ -380,7 +380,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2124160544781708929}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: HandleDialougeSystem
+          m_MethodName: HandleDialogueSystem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

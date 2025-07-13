@@ -23,12 +23,12 @@ public class DialogueManager : MonoBehaviour
         LoadDialogue("Dialogue/mapDialouge");
         LoadData("_DataSource/character_data");
         DisplayLine();
-        // HandleDialougeSystem();
+        // HandleDialogueSystem();
     }
 
     void Update()
     {
-        //HandleDialougeSystem();
+        //HandleDialogueSystem();
     }
     void LoadDialogue(string path)
     {
@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
             characterData[character.id] = character;
         }
     }
-    public void HandleDialougeSystem()
+    public void HandleDialogueSystem()
     {
         DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
 
