@@ -29,7 +29,7 @@ public class MainMenuManager : MonoBehaviour
             {
                 case 0:
                     btnText.text = "New Game";
-                    btn.onClick.AddListener(() => Debug.Log("New Game Clicked!"));
+                    btn.onClick.AddListener(() => GameDataManager.NewGame());
                     break;
                 case 1:
                     btnText.text = "Load Game";

@@ -12,26 +12,26 @@ public class DialogueManager : MonoBehaviour
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
 
-    private DialogueFile dialogueFile;
-    private int currentLineIndex = 0;
+    public static int currentLineIndex = 0;
+    public static string dialogueFilePath = "";
 
+    private DialogueFile dialogueFile;
     private Dictionary<string, CharacterData> characterData;
+
+    void Awake()
+    {
+        LoadDialogue(dialogueFilePath);
+        LoadData("_DataSource/character_data");
+    }
 
     void Start()
     {
-        Debug.Log(Application.persistentDataPath);
-        LoadDialogue("Dialogue/mapDialouge");
-        LoadData("_DataSource/character_data");
         DisplayLine();
-        // HandleDialogueSystem();
     }
 
-    void Update()
-    {
-        //HandleDialogueSystem();
-    }
     void LoadDialogue(string path)
     {
+        dialogueFilePath = path;
         TextAsset jsonText = Resources.Load<TextAsset>(path); // TextAsset is a Unity type used to store text data, such as .txt, .json, or .csv files.
         dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text); // jsonText.text retrieves the entire text content of the file as a string, ready for parsing.
     }
