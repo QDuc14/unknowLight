@@ -8,7 +8,7 @@
       "choices": []
     },
     {
-      "characterId": "theMen ",
+      "characterId": "theMen",
       "characterImageId": "00",
       "text": "I'll have a <link=\"blackCoffee\"><color=yellow><u>black coffee</u></color></link>, please.",
       "nextLineIndex": 1,

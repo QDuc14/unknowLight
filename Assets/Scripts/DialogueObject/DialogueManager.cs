@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI characterNameText;
+    public GameObject avartarPanel;
     public TextMeshProUGUI dialogueText;
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
@@ -22,6 +23,7 @@ public class DialogueManager : MonoBehaviour
         LoadDialogue("Dialogue/mapDialouge");
         LoadData("_DataSource/character_data");
         DisplayLine();
+        // HandleDialougeSystem();
     }
 
     void Update()
@@ -46,7 +48,6 @@ public class DialogueManager : MonoBehaviour
         {
             characterData[character.id] = character;
         }
-        Debug.Log(characterData["lor"].images[0].path);
     }
     public void HandleDialougeSystem()
     {
@@ -101,6 +102,14 @@ public class DialogueManager : MonoBehaviour
         {
             CharacterData character = characterData[line.characterId]; // Get the character name from the characterData dictionary using the characterId from the line.
             characterNameText.text = character.name;
+            foreach (AvatarImage image in character.images)
+            {
+                if (image.id != null && image.id == line.characterImageId)
+                {
+                    avartarPanel.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                    break;
+                }
+            }
         }
         else
         {
@@ -129,5 +138,6 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        Destroy(avartarPanel);
     }
 }

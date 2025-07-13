@@ -6,7 +6,7 @@
       "images": [
         {
           "id": "00",
-          "path": "Assets/Resources/Art/Character/Lor/Lor_Happy.png"
+          "path": "Art/Character/Lor/Lor_Draft"
         }
       ]
     },
@@ -16,7 +16,7 @@
       "images": [
         {
           "id": "00",
-          "path": "Assets/Resources/Art/Character/unknow/The_Men.png"
+          "path": "Art/Character/unknow/The_Men"
         }
       ]
     }
