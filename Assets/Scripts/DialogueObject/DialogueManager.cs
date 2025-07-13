@@ -109,11 +109,17 @@ public class DialogueManager : MonoBehaviour
                     avartarPanel.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
                     break;
                 }
+                else
+                {
+                    avartarPanel.GetComponent<Image>().sprite = null;
+                }
             }
         }
         else
         {
             characterNameText.text = "Unknown Character"; // Fallback if characterId is not found.
+            avartarPanel.GetComponent<Image>().sprite = null;
+
         }
 
         if (line.choices != null && line.choices.Count > 0)
@@ -132,12 +138,9 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        characterNameText.text = "";
         dialogueText.text = "The End.";
-        foreach (Transform child in choicesContainer)
-        {
-            Destroy(child.gameObject);
-        }
         Destroy(avartarPanel);
+        Destroy(choicesContainer.gameObject);
+        Destroy(characterNameText);
     }
 }
