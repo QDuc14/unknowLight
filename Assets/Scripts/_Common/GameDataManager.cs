@@ -17,7 +17,7 @@ public class GameDataManager : MonoBehaviour
         }
     }
 
-    public static void _SaveNewGame() // call from onClick event in the UI to save the current game state as a new save
+    public static void SaveNewGame() // call from onClick event in the UI to save the current game state as a new save
     {
         string saveFilePath = Path.Combine(Application.persistentDataPath, "Saved_Data_File.json");
         SavedDataFile dataFile = LoadAllData(saveFilePath);
@@ -37,7 +37,7 @@ public class GameDataManager : MonoBehaviour
         Debug.Log("Saved data: " + dataFile.savedDataList.Count.ToString());
     }
     
-    public static void _DeleteSavedGame(int index) // call from runtime with the index of the selected to delete
+    public static void DeleteSavedGame(int index) // call from runtime with the index of the selected to delete
     {
         string saveFilePath = Path.Combine(Application.persistentDataPath, "Saved_Data_File.json");
         SavedDataFile dataFile = LoadAllData(saveFilePath);
@@ -54,7 +54,7 @@ public class GameDataManager : MonoBehaviour
         }
     }
 
-    public static void _LoadGame(int index) // call from runtime with the index of the selected to load saved game
+    public static void LoadGame(int index) // call from runtime with the index of the selected to load saved game
     {
         string saveFilePath = Path.Combine(Application.persistentDataPath, "Saved_Data_File.json");
         SavedDataFile dataFile = LoadAllData(saveFilePath);

@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8010917024617811360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0}
-  m_AnchorMax: {x: 0.3, y: 0}
-  m_AnchoredPosition: {x: -80, y: 87.5}
-  m_SizeDelta: {x: 130, y: 135}
+  m_AnchorMin: {x: 0.16, y: 0}
+  m_AnchorMax: {x: 0.3, y: 0.33}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8664762157082964756
 CanvasRenderer:
@@ -107,10 +107,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8010917024617811360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0}
-  m_AnchorMax: {x: 0.3, y: 0}
-  m_AnchoredPosition: {x: -80, y: 37.5}
-  m_SizeDelta: {x: 131, y: 35}
+  m_AnchorMin: {x: 0.16, y: 0}
+  m_AnchorMax: {x: 0.3, y: 0.11}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2560613851928644807
 CanvasRenderer:
@@ -525,7 +525,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3862196376783235712, guid: e94468290c45a6342b0b1bfd69970006, type: 3}
         m_TargetAssemblyTypeName: GameDataManager, Assembly-CSharp
-        m_MethodName: _SaveNewGame
+        m_MethodName: SaveNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
