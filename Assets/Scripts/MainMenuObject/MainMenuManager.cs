@@ -4,8 +4,14 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject CanvasObject; // Reference to the Canvas object
+
+    public GameObject mainMenuPanelPrefab;
+    public GameObject mainMenuButtonContainerPrefab;
     public GameObject mainMenuButtonPrefab; // Prefab for the main menu button
-    public Transform buttonContainerObject; // Container for the main menu buttons
+
+    public GameObject LoadGameMenuContainerPrefab; // Prefab for the main menu button container
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,9 +26,11 @@ public class MainMenuManager : MonoBehaviour
 
     void GenerateMainMenuButton()
     {
+        mainMenuPanelPrefab = Instantiate(mainMenuPanelPrefab, CanvasObject.transform);
+        mainMenuButtonContainerPrefab = Instantiate(mainMenuButtonContainerPrefab, mainMenuPanelPrefab.transform);
         for (int i = 0; i < 4; i++)
         {
-            GameObject button = Instantiate(mainMenuButtonPrefab, buttonContainerObject);
+            GameObject button = Instantiate(mainMenuButtonPrefab, mainMenuButtonContainerPrefab.transform);
             TextMeshProUGUI btnText = button.GetComponentInChildren<TextMeshProUGUI>();
             Button btn = button.GetComponent<Button>();
             switch (i)
@@ -33,7 +41,7 @@ public class MainMenuManager : MonoBehaviour
                     break;
                 case 1:
                     btnText.text = "Load Game";
-                    btn.onClick.AddListener(() => Debug.Log("Load Game Clicked!"));
+                    btn.onClick.AddListener(() => OpenLoadGameMenu());
                     break;
                 case 2:
                     btnText.text = "Settings";
@@ -45,5 +53,11 @@ public class MainMenuManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void OpenLoadGameMenu()
+    {
+        Destroy(mainMenuButtonContainerPrefab); 
+        Instantiate(LoadGameMenuContainerPrefab, mainMenuPanelPrefab.transform);
     }
 }
