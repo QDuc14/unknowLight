@@ -10,7 +10,8 @@ public class MainMenuManager : MonoBehaviour
     public GameObject mainMenuButtonContainerPrefab;
     public GameObject mainMenuButtonPrefab; // Prefab for the main menu button
 
-    public GameObject LoadGameMenuContainerPrefab; // Prefab for the main menu button container
+    public GameObject loadGameMenuPanelPrefab;
+    public GameObject loadGameMenuContainerPrefab; // Prefab for the main menu button container
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +59,6 @@ public class MainMenuManager : MonoBehaviour
     void OpenLoadGameMenu()
     {
         Destroy(mainMenuButtonContainerPrefab); 
-        Instantiate(LoadGameMenuContainerPrefab, mainMenuPanelPrefab.transform);
+        Instantiate(loadGameMenuContainerPrefab, mainMenuPanelPrefab.transform);
     }
 }

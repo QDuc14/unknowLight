@@ -406,7 +406,7 @@ MonoBehaviour:
   mainMenuPanelPrefab: {fileID: 5106593857004148759, guid: bb548e631ad8768409d6cb7a9364a6e5, type: 3}
   mainMenuButtonContainerPrefab: {fileID: 758576919161766335, guid: 9681c1b32c4bdcc4c8b5d5424181381b, type: 3}
   mainMenuButtonPrefab: {fileID: 7509069282267074826, guid: 5cff43592af03d04e8a102b47c1f9976, type: 3}
-  LoadGameMenuContainerPrefab: {fileID: 4892561227795951959, guid: 3e85d772b9b19c94ba1cc0bfcc542fb1, type: 3}
+  loadGameMenuContainerPrefab: {fileID: 4892561227795951959, guid: 3e85d772b9b19c94ba1cc0bfcc542fb1, type: 3}
 --- !u!1 &2103239562
 GameObject:
   m_ObjectHideFlags: 0
