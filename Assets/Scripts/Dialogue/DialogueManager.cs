@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -20,13 +21,19 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        LoadDialogue(dialogueFilePath);
-        LoadData("_DataSource/character_data");
+        if (dialogueFilePath != "")
+        {
+            LoadDialogue(dialogueFilePath);
+            LoadData("_DataSource/character_data");
+        }
     }
 
     void Start()
     {
-        DisplayLine();
+        if (dialogueFilePath != "")
+        {
+            DisplayLine();
+        }
     }
 
     void LoadDialogue(string path)
@@ -51,6 +58,11 @@ public class DialogueManager : MonoBehaviour
     }
     public void HandleDialogueSystem()
     {
+        // Check if dialogueFile is loaded and has lines
+        if (dialogueFile == null || dialogueFile.lines == null || dialogueFile.lines.Count == 0)
+        {
+            return;
+        }
         DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
 
         // Check if mouse is over a TMP link before advancing
