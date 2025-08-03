@@ -12,7 +12,18 @@
       "characterImageId": "00",
       "text": "<i>Today feels dull and plain, just like any other day.</i>",
       "nextLineIndex": 1,
-      "choices": []
+      "choices": [
+        {
+          "text": "Continue...",
+          "nextLineIndex": 1,
+          "flag": "A"
+        },
+        {
+          "text": "Skip 1 line",
+          "nextLineIndex": 2,
+          "flag": "B"
+        }
+      ]
     },
     {
       "characterId": "lor",

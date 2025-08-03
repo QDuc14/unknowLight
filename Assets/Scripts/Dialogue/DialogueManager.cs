@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (currentLine.choices != null && currentLine.nextLineIndex >= 0)
+        if (currentLine.choices != null && currentLine.nextLineIndex >= 0 && currentLine.choices.Count == 0)
         {
             OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
             return;
@@ -143,7 +143,7 @@ public class DialogueManager : MonoBehaviour
                 btnText.text = choice.text;
 
                 Button btn = choiceObj.GetComponent<Button>();
-                btn.onClick.AddListener(() => OnChoiceSelected(choice.nextLineIndex));
+                btn.onClick.AddListener(() => OnChoiceSelected(choice.nextLineIndex + currentLineIndex));
             }
         }
     }

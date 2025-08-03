@@ -3,6 +3,10 @@ using UnityEngine;
 public class guider : MonoBehaviour
 {
     public GameObject objectA;
+    public GameObject objectB;
+    public GameObject container;
+
+    private GameObject objectBInstance;
 
     void Awake()
     {
