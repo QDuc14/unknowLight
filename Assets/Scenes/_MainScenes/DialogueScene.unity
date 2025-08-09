@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &176943440
+--- !u!1001 &340970069
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -127,13 +127,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1088560685122717032, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088560685122717032, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088560685122717032, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088560685122717032, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4610045873909318252, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 588.5728
+      value: 601.2534
       objectReference: {fileID: 0}
     - target: {fileID: 4610045873909318252, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 302.40512
+      value: 212.09665
       objectReference: {fileID: 0}
     - target: {fileID: 4610045873909318252, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -397,5 +413,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 176943440}
+  - {fileID: 340970069}
   - {fileID: 2107644490}

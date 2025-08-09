@@ -68,6 +68,6 @@ public class GameDataManager : MonoBehaviour
     {
         DialogueManager.dialogueFilePath = "Dialogue/sample_dialogue";
         DialogueManager.currentLineIndex = 0;
-        SceneManager.LoadScene("DialogueScene");
+        SceneManager.LoadScene("DialogueScene"); 
     }
 }

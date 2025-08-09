@@ -59,10 +59,11 @@ public class DialogueManager : MonoBehaviour
     public void HandleDialogueSystem()
     {
         // Check if dialogueFile is loaded and has lines
-        if (dialogueFile == null || dialogueFile.lines == null || dialogueFile.lines.Count == 0)
+        if (dialogueFile == null || dialogueFile.lines == null || dialogueFile.lines.Count == 0 || currentLineIndex >= dialogueFile.lines.Count)
         {
             return;
         }
+
         DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
 
         // Check if mouse is over a TMP link before advancing
@@ -150,6 +151,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        currentLineIndex += 1;
         dialogueText.text = "The End.";
         Destroy(avartarPanel);
         Destroy(choicesContainer.gameObject);
