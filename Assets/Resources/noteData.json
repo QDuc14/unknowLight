@@ -1,0 +1,47 @@
+{
+    "characters" :
+    [
+        {
+            "name": "Amelia Hartfield",
+            "description": "Amelia stands at a modest 5'4\", her frame slender but sturdy, as if she’s weathered more than a few storms—both literal and metaphorical. Her wavy auburn hair spills over her shoulders, catching the light like threads of copper. She wears a pair of round spectacles that slide down her nose when she laughs, revealing warm hazel eyes with golden flecks. The freckles on her cheeks make her look perpetually kissed by the sun. She tends to wear linen dresses in muted colors, always with a leather-bound notebook tucked under her arm."
+        },
+        {
+            "name": "Victor Rasmussen",
+            "description": "Broad-shouldered and towering at nearly 6’5\", Victor has the build of a man carved from stone. His jawline is sharp, his cheekbones high, and a neatly trimmed beard frames his face with a salt-and-pepper ruggedness. His eyes are a piercing glacier blue—both inviting and intimidating at once. A faint scar runs from his right eyebrow to his temple, a remnant of a youth spent recklessly. He prefers tailored suits, even when casual attire would suffice, and carries himself with an unshakable air of control."
+        },
+        {
+            "name": "Sienna Morales",
+            "description": "Sienna has a radiant complexion, her warm bronze skin glowing under any light. Her thick, jet-black curls fall in a cascade down her back, framing her heart-shaped face. She has full lips often painted a bold red, and almond-shaped brown eyes that gleam with quiet mischief. Her wardrobe is eclectic—colorful skirts, embroidered jackets, and gold hoop earrings that catch the sun. She wears a thin silver anklet that jingles faintly when she walks, like her own personal soundtrack."
+        },
+        {
+            "name": "Tobias Crane",
+            "description": "Tobias’s appearance is sharp and angular, like a sketch done in clean, deliberate lines. His raven-black hair is slicked back with precision, not a strand out of place. A pale complexion contrasts with his charcoal-gray eyes, which seem perpetually calculating. He dresses almost exclusively in monochrome—black shirts, black trousers, and dark coats, with the occasional silver tie pin for variety. He moves quietly, almost too quietly, as though he’s learned the art of being overlooked until it’s too late."
+        },
+        {
+            "name": "Helena Cross",
+            "description": "Helena is the kind of person whose presence fills a room before she even speaks. Tall and statuesque, she walks with a natural elegance that makes people turn their heads. Her dark mahogany skin is smooth and luminous, and she wears her hair in long, intricate braids that reach her waist. Her eyes are an earthy green, rare and arresting against her complexion. She’s often seen in flowing silk gowns, her wrists adorned with bangles that chime softly as she gestures."
+        },
+        {
+            "name": "Matteo Ricciardi",
+            "description": "Matteo exudes a warmth that’s visible before he even says hello. His olive skin bears a perpetual sun-kissed glow, and his wavy chestnut hair is always just a little messy, as though he’s stepped away from the beach moments ago. A dimple appears on his left cheek whenever he smiles, which is often. His deep brown eyes seem to carry a perpetual sparkle of curiosity. He dresses casually—open-collared shirts, rolled-up sleeves, and well-worn leather sandals that have clearly traveled the world with him."
+        },
+        {
+            "name": "Freya Lindholm",
+            "description": "Freya is ethereal in a way that’s difficult to pin down. Her platinum-blonde hair is so pale it almost seems silver, and she wears it loose, cascading like a waterfall down her back. Her skin is porcelain, nearly translucent, and her high cheekbones give her an air of quiet nobility. Her icy blue eyes seem to hold both distance and depth, like a frozen lake hiding unknown worlds beneath. She often wears soft, layered fabrics in muted grays and whites, making her look like she stepped out of a Scandinavian winter painting."
+        },
+        {
+            "name": "Samuel Ortega",
+            "description": "Samuel is compact and solidly built, with a strong presence that belies his average height. His tanned skin is contrasted by a thick beard and neatly kept mustache, streaked lightly with gray. His deep-set dark eyes have a way of lingering on people, as though measuring their worth. He favors simple clothing—denim jackets, plain T-shirts, and work boots—though he wears them with the confidence of a man who doesn’t need to try to impress. His hands are calloused, evidence of a lifetime of labor."
+        },
+        {
+            "name": "Anika Verma",
+            "description": "Anika’s style is a celebration of color and texture. Her dark almond eyes sparkle with an almost childlike wonder, and her smile is quick and genuine. Her skin is a rich honey-brown, and her thick, inky-black hair is often braided with threads of gold or small jasmine flowers. She wears flowing skirts, patterned scarves, and layered jewelry that jingles softly when she moves. Even in a crowd, she seems to radiate a kind of joyful energy that draws people in."
+        },
+        {
+            "name": "Nikolai Petrov",
+            "description": "Nikolai is lean and wiry, with a face full of sharp, defined angles. His sandy-brown hair is always slightly tousled, as though he’s been in a windstorm. His gray-green eyes have a restless quality, scanning every room like a hawk in search of movement. His nose is slightly crooked from an old break, adding a rugged charm to his otherwise refined features. He wears leather jackets, scuffed boots, and carries himself with a quiet alertness—as though he’s always one step away from running or fighting."
+        }
+    ]
+}
+
+
