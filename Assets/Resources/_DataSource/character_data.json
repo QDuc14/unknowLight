@@ -15,8 +15,18 @@
       ]
     },
     {
-      "id": "theMen",
-      "name": "The Men",
+      "id": "alyssa",
+      "name": "Alyssa",
+      "images": [
+        {
+          "id": "01",
+          "path": "Art/Character/Lilith/Alyssa_normal"
+        }
+      ]
+    },
+    {
+      "id": "Shdw1",
+      "name": "The Man",
       "images": [
         {
           "id": "00",
