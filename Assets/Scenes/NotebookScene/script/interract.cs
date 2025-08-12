@@ -3,12 +3,14 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using UnityEngine.Rendering;
 
 public class interract : MonoBehaviour
 {
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private Transform panelParent;
-
+    [SerializeField] private GameObject headerText;
+    [SerializeField] private GameObject detailText;
     [System.Serializable]
     protected class charInfomation
     {
@@ -21,40 +23,42 @@ public class interract : MonoBehaviour
     {
         public List<charInfomation> characters;
     }
-    // List<charInfomation> list = new List<charInfomation>
-    // {
-    //     new charInfomation
-    //     {
-    //         name = "Thanh",
-    //         description = "Dep Trai"
-    //     },
-    //     new charInfomation
-    //     {
-    //         name = "Teo",
-    //         description = "Xau trai"
-    //     }
-    // };
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         TextAsset jsonData = Resources.Load<TextAsset>("noteData");
+        wrapperGetJsonData jsonDataObject = JsonUtility.FromJson<wrapperGetJsonData>(jsonData.text);
         if (jsonData != null)
         {
-            wrapperGetJsonData jsonDataObject = JsonUtility.FromJson<wrapperGetJsonData>(jsonData.text);
             foreach (charInfomation info in jsonDataObject?.characters ?? new List<charInfomation>())
+            {
+                GameObject createdButton = Instantiate(buttonPrefab, panelParent);
+                if (createdButton == null)
                 {
-                    GameObject createdButton = Instantiate(buttonPrefab, panelParent);
-                    if (createdButton?.GetComponentInChildren<TMP_Text>() == null)
-                    {
-                        Debug.Log("Failed to create Button Object at NoteBook Scene!");
-                    }
-                    else
-                    {
-                        createdButton.GetComponentInChildren<TMP_Text>().text = info.name;
-                    }
+                    Debug.Log("Failed to create Button Object at NoteBook Scene!");
                 }
+                else
+                {
+                    createdButton.GetComponentInChildren<TMP_Text>().text = info.name;
+                    createdButton.GetComponent<Button>().onClick.AddListener(() => displayMainInfo(info.name, jsonDataObject));
+                }
+            }
         }
-        
+    }
+
+    void displayMainInfo(string name, wrapperGetJsonData jsonObject)
+    {
+        //headerText.GetComponent<TMP_Text>().text = name;
+        //detailText.GetComponent<TMP_Text>().text = 
+        foreach (charInfomation info in jsonObject?.characters ?? new List<charInfomation>())
+        {
+            if (info.name.Equals(name))
+            {
+                headerText.GetComponent<TMP_Text>().text = name;
+                detailText.GetComponent<TMP_Text>().text = info.description;
+            }
+        }
+        Debug.Log("Clicked " + name);
     }
 
     // Update is called once per frame
