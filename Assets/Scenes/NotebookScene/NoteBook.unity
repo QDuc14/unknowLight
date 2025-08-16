@@ -1665,6 +1665,7 @@ MonoBehaviour:
   panelParent: {fileID: 342949171}
   headerText: {fileID: 4704496}
   detailText: {fileID: 937967669}
+  charImg: {fileID: 545123377}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
