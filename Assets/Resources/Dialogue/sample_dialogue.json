@@ -5,6 +5,14 @@
       "characterImageId": "01",
       "text": "<i>It’s raining outside, huh.</i>",
       "nextLineIndex": 1,
+      "actor": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true,
+          "pos": 3
+        }
+      ],
       "choices": []
     },
     {
