@@ -11,6 +11,7 @@ public class interract : MonoBehaviour
     [SerializeField] private Transform panelParent;
     [SerializeField] private GameObject headerText;
     [SerializeField] private GameObject detailText;
+    [SerializeField] private GameObject charImg;
     [System.Serializable]
     protected class charInfomation
     {
@@ -54,8 +55,11 @@ public class interract : MonoBehaviour
         {
             if (info.name.Equals(name))
             {
+                string imgFileName = $"Art/Character/{name}/{name}_normal";
                 headerText.GetComponent<TMP_Text>().text = name;
                 detailText.GetComponent<TMP_Text>().text = info.description;
+
+                charImg.GetComponent<Image>().sprite = Resources.Load<Sprite>(imgFileName);
             }
         }
         Debug.Log("Clicked " + name);

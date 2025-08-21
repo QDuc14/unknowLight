@@ -5,13 +5,10 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject CanvasObject; // Reference to the Canvas object
-    public GameObject mainMenuPanelPrefab;
+    public GameObject mainMenuPanel;
     public GameObject mainMenuButtonContainerPrefab;
     public GameObject mainMenuButtonPrefab; // Prefab for the main menu button
-    public GameObject loadGameMenuPanelPrefab;
-    public GameObject loadGameMenuContainerPrefab; // Prefab for the main menu button container
-
-    public GameObject BackButtonPrefab; // Prefab for the load game button
+    public GameObject loadGameMenuPanel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +31,7 @@ public class MainMenuManager : MonoBehaviour
                 return;
             }
         }
-        if (mainMenuPanelPrefab == null || mainMenuButtonContainerPrefab == null || mainMenuButtonPrefab == null || loadGameMenuPanelPrefab == null || loadGameMenuContainerPrefab == null || BackButtonPrefab == null)
+        if (mainMenuPanel == null || mainMenuButtonContainerPrefab == null || mainMenuButtonPrefab == null || loadGameMenuPanel == null)
         {
             Debug.LogError("One or more prefabs are not assigned in the inspector.");
             return;
@@ -45,8 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     void GenerateMainMenu()
     {
-        mainMenuPanelPrefab = Instantiate(mainMenuPanelPrefab, CanvasObject.transform);
-        mainMenuButtonContainerPrefab = Instantiate(mainMenuButtonContainerPrefab, mainMenuPanelPrefab.transform);
+        mainMenuButtonContainerPrefab = Instantiate(mainMenuButtonContainerPrefab, mainMenuPanel.transform);
         for (int i = 0; i < 4; i++)
         {
             GameObject button = Instantiate(mainMenuButtonPrefab, mainMenuButtonContainerPrefab.transform);
@@ -72,25 +68,26 @@ public class MainMenuManager : MonoBehaviour
                     break;
             }
         }
+        mainMenuPanel.SetActive(true);
     }
 
     void GenerateLoadGameMenu()
     {
-        loadGameMenuPanelPrefab = Instantiate(loadGameMenuPanelPrefab, CanvasObject.transform);
-        BackButtonPrefab = Instantiate(BackButtonPrefab, loadGameMenuPanelPrefab.transform);
-        BackButtonPrefab.GetComponent<Button>().onClick.AddListener(() => CloseLoadGameMenu());
-        loadGameMenuPanelPrefab.SetActive(false);
+        var t = loadGameMenuPanel.transform.Find("TitlePanel/BackButton");
+        if (t && t.TryGetComponent(out Button btn))
+            btn.onClick.AddListener(CloseLoadGameMenu);
+        loadGameMenuPanel.SetActive(false);
     }
 
     void OpenLoadGameMenu()
     {
-        mainMenuPanelPrefab.SetActive(false);
-        loadGameMenuPanelPrefab.SetActive(true);
+        mainMenuPanel.SetActive(false);
+        loadGameMenuPanel.SetActive(true);
     }
 
     public void CloseLoadGameMenu()
     {
-        loadGameMenuPanelPrefab.SetActive(false);
-        mainMenuPanelPrefab.SetActive(true);
+        loadGameMenuPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 }
