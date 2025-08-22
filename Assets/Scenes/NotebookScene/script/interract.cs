@@ -12,26 +12,14 @@ public class interract : MonoBehaviour
     [SerializeField] private GameObject headerText;
     [SerializeField] private GameObject detailText;
     [SerializeField] private GameObject charImg;
-    [System.Serializable]
-    protected class charInfomation
-    {
-        public string name;
-        public string description;
-    }
-
-   [System.Serializable]
-    protected class wrapperGetJsonData
-    {
-        public List<charInfomation> characters;
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        TextAsset jsonData = Resources.Load<TextAsset>("noteData");
-        wrapperGetJsonData jsonDataObject = JsonUtility.FromJson<wrapperGetJsonData>(jsonData.text);
+        TextAsset jsonData = Resources.Load<TextAsset>("_DataSource/character_data");
+        CharacterDatabase jsonDataObject = JsonUtility.FromJson<CharacterDatabase>(jsonData.text);
         if (jsonData != null)
         {
-            foreach (charInfomation info in jsonDataObject?.characters ?? new List<charInfomation>())
+            foreach (CharacterData info in jsonDataObject?.characters ?? new List<CharacterData>())
             {
                 GameObject createdButton = Instantiate(buttonPrefab, panelParent);
                 if (createdButton == null)
@@ -47,11 +35,9 @@ public class interract : MonoBehaviour
         }
     }
 
-    void displayMainInfo(string name, wrapperGetJsonData jsonObject)
+    void displayMainInfo(string name, CharacterDatabase jsonObject)
     {
-        //headerText.GetComponent<TMP_Text>().text = name;
-        //detailText.GetComponent<TMP_Text>().text = 
-        foreach (charInfomation info in jsonObject?.characters ?? new List<charInfomation>())
+        foreach (CharacterData info in jsonObject?.characters ?? new List<CharacterData>())
         {
             if (info.name.Equals(name))
             {

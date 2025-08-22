@@ -932,12 +932,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasObject: {fileID: 0}
-  mainMenuPanelPrefab: {fileID: 5106593857004148759, guid: bb548e631ad8768409d6cb7a9364a6e5, type: 3}
+  mainMenuPanel: {fileID: 0}
   mainMenuButtonContainerPrefab: {fileID: 758576919161766335, guid: 9681c1b32c4bdcc4c8b5d5424181381b, type: 3}
   mainMenuButtonPrefab: {fileID: 7509069282267074826, guid: 5cff43592af03d04e8a102b47c1f9976, type: 3}
-  loadGameMenuPanelPrefab: {fileID: 0}
-  loadGameMenuContainerPrefab: {fileID: 4892561227795951959, guid: 3e85d772b9b19c94ba1cc0bfcc542fb1, type: 3}
-  BackButtonPrefab: {fileID: 0}
+  loadGameMenuPanel: {fileID: 0}
 --- !u!4 &1081821583
 Transform:
   m_ObjectHideFlags: 0
@@ -1028,7 +1026,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

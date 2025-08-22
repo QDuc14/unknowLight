@@ -12,7 +12,8 @@
           "id": "01",
           "path": "Art/Character/Lor/Lor_normal"
         }
-      ]
+      ],
+      "description": "Lor stands at a modest 5'4\", her frame slender but sturdy, as if she’s weathered more than a few storms—both literal and metaphorical. Her wavy auburn hair spills over her shoulders, catching the light like threads of copper."
     },
     {
       "id": "alyssa",
@@ -22,7 +23,8 @@
           "id": "01",
           "path": "Art/Character/Lilith/Alyssa_normal"
         }
-      ]
+      ],
+      "description": "Broad-shouldered and towering at nearly 6’5\", Alyssa has the build of a man carved from stone. His jawline is sharp, his cheekbones high, and a neatly trimmed beard frames his face with a salt-and-pepper ruggedness. "
     },
     {
       "id": "Shdw1",
@@ -32,7 +34,8 @@
           "id": "00",
           "path": "Art/Character/unknow/The_Men"
         }
-      ]
+      ],
+      "description": "Sienna has a radiant complexion, her warm bronze skin glowing under any light. Her thick, jet-black curls fall in a cascade down her back, framing her heart-shaped face."
     }
   ]
 }
