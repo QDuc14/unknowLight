@@ -133,48 +133,58 @@ public class DialogueManager : MonoBehaviour
         CharacterData character1 = characterData[actors[0].charId];
         CharacterData character2 = characterData[actors[1].charId];
 
-        if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
-        {
-            characterNameText.text = "";
-        }
-        else
-        {
-            characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
-        }
+        //if (actors.Count == 0)
+        //{
+        //    characterNameText.text = "";
+        //    characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
 
-        if (characterData.ContainsKey(actors[0].charId))
-        {
-            foreach (AvatarImage image in characterData[actors[0].charId].images)
+        //}
+        //else
+        //{
+            if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
             {
-                if (image.id != null && image.id == actors[0].charImgId)
-                {
-                    avartarPanel1.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
-                    break;
-                }
-                else
-                {
-                    avartarPanel1.GetComponent<Image>().sprite = null;
-                }
+                characterNameText.text = "";
             }
-            avartarPanel1.GetComponent<Image>().color = !actors[0].actFlg ? new Color(0.6f, 0.6f, 0.6f, 1f) : new Color(1f, 1f, 1f, 1f);
-        }
+            else
+            {
+                characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
+            }
 
-        if (characterData.ContainsKey(actors[1].charId))
-        {
-            foreach (AvatarImage image in characterData[actors[1].charId].images)
+            if (characterData.ContainsKey(actors[0].charId))
             {
-                if (image.id != null && image.id == actors[1].charImgId)
+                foreach (AvatarImage image in characterData[actors[0].charId].images)
                 {
-                    avartarPanel2.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
-                    break;
+                    if (image.id != null && image.id == actors[0].charImgId)
+                    {
+                        avartarPanel1.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                        break;
+                    }
+                    else
+                    {
+                        avartarPanel1.GetComponent<Image>().sprite = null;
+                    }
                 }
-                else
-                {
-                    avartarPanel2.GetComponent<Image>().sprite = null;
-                }
+                avartarPanel1.GetComponent<Image>().color = !actors[0].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
             }
-            avartarPanel2.GetComponent<Image>().color = !actors[1].actFlg ? new Color(0.6f, 0.6f, 0.6f, 1f) : new Color(1f, 1f, 1f, 1f);
-        }
+
+            if (characterData.ContainsKey(actors[1].charId))
+            {
+                foreach (AvatarImage image in characterData[actors[1].charId].images)
+                {
+                    if (image.id != null && image.id == actors[1].charImgId)
+                    {
+                        avartarPanel2.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                        break;
+                    }
+                    else
+                    {
+                        avartarPanel2.GetComponent<Image>().sprite = null;
+                    }
+                }
+                avartarPanel2.GetComponent<Image>().color = !actors[1].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
+            }
+        //}
+        
     }
 
     void EndDialogue()
