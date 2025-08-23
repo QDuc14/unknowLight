@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa9236b1bce641d4d867d719eb6fee57
+guid: 20ad60b6c257129488eb854b31f943dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2480363893637288375
-    second: Lor_normal_0
+      213: -8823392296105694305
+    second: Verran_normal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lor_normal_0
+      name: Verran_normal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 660
-        height: 960
+        width: 334
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b194f9d1d50c6220800000000000000
-      internalID: 2480363893637288375
+      spriteID: f9ba3bc74730d8580800000000000000
+      internalID: -8823392296105694305
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 377873a93db215d48bc5c287c225c605
+    spriteID: 73e04dee8dfa8af4e8b120ecd90500fa
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lor_normal_0: 2480363893637288375
+      Verran_normal_0: -8823392296105694305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

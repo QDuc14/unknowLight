@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa9236b1bce641d4d867d719eb6fee57
+guid: 72c77a1a74c3f30438430cf6959cf0db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2480363893637288375
-    second: Lor_normal_0
+      213: 5969988800054612313
+    second: BG_Menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lor_normal_0
+      name: BG_Menu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 660
-        height: 960
+        width: 2860
+        height: 1610
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b194f9d1d50c6220800000000000000
-      internalID: 2480363893637288375
+      spriteID: 951d05cee29a9d250800000000000000
+      internalID: 5969988800054612313
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 377873a93db215d48bc5c287c225c605
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lor_normal_0: 2480363893637288375
+      BG_Menu_0: 5969988800054612313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

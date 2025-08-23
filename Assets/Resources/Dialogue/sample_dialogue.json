@@ -10,8 +10,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -27,8 +27,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -44,8 +44,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -61,8 +61,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -78,8 +78,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -95,8 +95,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -112,8 +112,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -129,8 +129,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -146,8 +146,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -163,8 +163,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -180,8 +180,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -197,8 +197,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -214,8 +214,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -231,8 +231,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -248,15 +248,15 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
       "choices": []
     },
     {
-      "text": "For a tired person to come to a bar and order black coffee instead of going straight to bed. \nYou’re exhausted because the investigation has been going on for days without any results, but instead of resting, you came here, for you seek answers, not sleep.",
+      "text": "For a tired person to come to a bar and order black coffee instead of going straight to bed.",
       "nextLineIndex": 1,
       "actors": [
         {
@@ -265,15 +265,15 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
       "choices": []
     },
     {
-      "text": "When you entered the bar, you turned to glance out the door to check for anyone suspicious outside. \nAnd when you sat down, you looked around for anyone who might overhear this conversation. Such meticulous actions show that you’re not here to relax...",
+      "text": "You’re exhausted because the investigation has been going on for days without any results, but instead of resting, you came here, for you seek answers, not sleep.",
       "nextLineIndex": 1,
       "actors": [
         {
@@ -282,8 +282,25 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "And when you sat down, you looked around for anyone who might overhear this conversation. Such meticulous actions show that you’re not here to relax...",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -299,8 +316,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -316,8 +333,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -333,8 +350,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -350,8 +367,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -367,8 +384,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -384,8 +401,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -401,8 +418,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -418,8 +435,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -435,8 +452,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -452,8 +469,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -469,8 +486,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -486,8 +503,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -503,8 +520,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -520,8 +537,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -537,8 +554,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -554,8 +571,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -571,8 +588,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -588,8 +605,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -605,8 +622,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -622,8 +639,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -639,8 +656,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -656,8 +673,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -673,8 +690,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -690,8 +707,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": true
         }
       ],
@@ -707,8 +724,8 @@
           "actFlg": false
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -724,8 +741,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -741,8 +758,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
@@ -758,8 +775,8 @@
           "actFlg": true
         },
         {
-          "charId": "Shdw1",
-          "charImgId": "00",
+          "charId": "verran",
+          "charImgId": "01",
           "actFlg": false
         }
       ],
