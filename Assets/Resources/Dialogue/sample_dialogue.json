@@ -1,106 +1,768 @@
 {
   "lines": [
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>It’s raining outside, huh.</i>",
+      "text": "This place feels really cozy...",
       "nextLineIndex": 1,
-      "actor": [
+      "actors": [
         {
           "charId": "lor",
           "charImgId": "01",
-          "actFlg": true,
-          "pos": 3
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
         }
       ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>Today feels dull and plain, just like any other day.</i>",
+      "text": "I’ll have a black coffee, please.",
       "nextLineIndex": 1,
-      "choices": [
+      "actors": [
         {
-          "text": "Continue...",
-          "nextLineIndex": 1,
-          "flag": "A"
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
         },
         {
-          "text": "Skip 1 line",
-          "nextLineIndex": 2,
-          "flag": "B"
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
         }
-      ]
-    },
-    {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>Not that I hate it. I’ve always expected days like this ever since I decided to open this bar.</i>",
-      "nextLineIndex": 1,
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>Still, why does it feel like my heart isn’t at peace?</i>",
+      "text": "As soon as he sat down, the man looked around as if it were a natural thing to do. Lor knew exactly why this man had come here, grudgingly making a coffee while eyeing him.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>I chose this life, and yet, deep down, I find myself yearning for something I can’t quite name.</i>",
+      "text": "I told you I would never work with the police again. I don’t want anything to do with your ‘justice’ anymore.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>A man with a sharp mind and logical thinking like me, and I still can’t understand myself sometimes. How ironic.</i>",
+      "text": "A flash of light, followed by a deafening clap of thunder. The rain grew heavier and heavier, making the atmosphere of the conversation sink even deeper.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>If she were still here, I bet she’d instantly know what I’m thinking and what I’m looking for. She always did.</i>",
+      "text": "You know, I’m not comfortable with it either. Even if the sword has rusted a bit, it’s still a sword that many bad guys fear.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>The last customer left an hour ago. So there’s no need to rush.</i>",
+      "text": "I don’t think throwing that sword away is a good idea. Besides, I didn’t say I came here to ask for your help, did I?",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>People on this little street often come to my bar — not just for the drinks, but because most of them have a favor to ask.</i>",
+      "text": "As he spoke, the man placed his briefcase neatly on the counter.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>No matter how many times I say I don’t want to be called a detective anymore, they still trust their ‘Detective Lor’ to help.</i>",
+      "text": "Please, you think I didn’t notice? The police station is on the other side of the city...",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>But seeing how happy and relieved they look afterward, the way they sincerely thank me — it does feel kinda nice.</i>",
+      "text": "There’s no way you could have happened to stop here on your way back.",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     },
     {
-      "characterId": "lor",
-      "characterImageId": "01",
-      "text": "<i>I just can’t turn away good people trying to survive in this suffocating, chaotic city.</i>",
+      "text": "And as far as I remember...",
       "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "You’re not a drinker.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "I thought maybe, after not seeing you for a while, you started drinking, but it’s rather unlikely.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "The looks on your face and your movements make it seem like you’ve been working all night for days, but you’re wearing casual clothes, which means you just got home to get some rest.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "It’s really strange, isn’t it?",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "For a tired person to come to a bar and order black coffee instead of going straight to bed. \nYou’re exhausted because the investigation has been going on for days without any results, but instead of resting, you came here, for you seek answers, not sleep.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "When you entered the bar, you turned to glance out the door to check for anyone suspicious outside. \nAnd when you sat down, you looked around for anyone who might overhear this conversation. Such meticulous actions show that you’re not here to relax...",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "You have another purpose, right?",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Lor skillfully placed the steaming cup in front of the customer, who was still frozen by the accuracy of his deduction.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Also, you went home to change clothes, yet you still brought your work briefcase with you, and always leave it where you can keep an eye on it. It seems whatever you want from me is related to what's in that old briefcase.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Lor pointed at it, causing the man to look at the briefcase.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "It was true that even when the man walked in the pouring rain, not a single drop of water was on it. That proved the content inside must be really important.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "The man smiled with satisfaction, picked up the mug, and took a sip.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "It's hard to fool you, Lor. But this coffee tastes strange, are you sure a bartender fit you?",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "It’s chamomile tea, it’ll help you sleep better. If you think it’s coffee, your brain really needs a break. I know you only ordered coffee because you’ve never been to a bar and didn’t know what to order.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "You’re as sharp as ever. It’s a shame the police department lost a talent like you. But there are two things you missed in your reasoning…",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "The man tried to say more, but Lor cut him off, his eyes shining like a toy robot that had its batteries recently replaced. ",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Oh, really? This conversation just got a little more interesting.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "That’s right. First, you think you’ll have to deal with the police, but I assure you, no one will know about this except you and me. The police won’t be involved in this.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Second, I changed out of my investigator’s uniform before coming here, not to hide my true intentions, but to come here to ask you. Not as investigator Verran, but as a friend. Just Verran.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "I know you’re not comfortable dealing with the police anymore, so I came all the way here to ask you in person. Think of me as a regular customer.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "An old classmate of mine was just murdered, the police station has already arrested the suspect, but there is still something baffling about this case. I turned the whole house upside down, but still couldn’t find the murder weapon.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "It was as if it had grown wings and flown out of the house. Everyone at the department advised me to give up on this case, since we’d already caught the suspect anyway...",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "But I still want to get to the bottom of this case, especially after that incident.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Silence once again enveloped the room, and the heavy atmosphere made the investigator pause and lower his head. ",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "I don’t want to talk about that anymore, I’ve buried that past long ago,",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Lor broke the silence. Placing his hands behind his head as he looked up at the ceiling.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "So, inside the briefcase is the information I need to solve this case? Is there any information that you know but isn’t in there?",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Did I say I would help you?",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "I will help you, but on one condition.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Alright, let me hear the condition. If it is money, I don’t think that’ll be a problem.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": true
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Lor took out a small notebook from his pocket and carefully wrote something down.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "Don’t worry, it’s something within your ability.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "I won’t ask for anything too outrageous. You can go home and get some sleep now. I don't think you'll be of much help to me in that state.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    },
+    {
+      "text": "If I find anything, I’ll call you back.",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        },
+        {
+          "charId": "Shdw1",
+          "charImgId": "00",
+          "actFlg": false
+        }
+      ],
       "choices": []
     }
   ]

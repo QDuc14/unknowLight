@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI characterNameText;
-    public GameObject avartarPanel;
+    public GameObject avartarPanel1;
+    public GameObject avartarPanel2;
     public TextMeshProUGUI dialogueText;
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
@@ -111,29 +111,7 @@ public class DialogueManager : MonoBehaviour
         DialogueLine line = dialogueFile.lines[currentLineIndex];
         dialogueText.text = line.text;
 
-        if (characterData.ContainsKey(line.characterId))
-        {
-            CharacterData character = characterData[line.characterId]; // Get the character name from the characterData dictionary using the characterId from the line.
-            characterNameText.text = character.name;
-            foreach (AvatarImage image in character.images)
-            {
-                if (image.id != null && image.id == line.characterImageId)
-                {
-                    avartarPanel.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
-                    break;
-                }
-                else
-                {
-                    avartarPanel.GetComponent<Image>().sprite = null;
-                }
-            }
-        }
-        else
-        {
-            characterNameText.text = "Unknown Character"; // Fallback if characterId is not found.
-            avartarPanel.GetComponent<Image>().sprite = null;
-
-        }
+        GetActorsInfo(line);
 
         if (line.choices != null && line.choices.Count > 0)
         {
@@ -149,11 +127,62 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    void GetActorsInfo(DialogueLine line)
+    {
+        List<Actor> actors = line.actors;
+        CharacterData character1 = characterData[actors[0].charId];
+        CharacterData character2 = characterData[actors[1].charId];
+
+        if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
+        {
+            characterNameText.text = "";
+        }
+        else
+        {
+            characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
+        }
+
+        if (characterData.ContainsKey(actors[0].charId))
+        {
+            foreach (AvatarImage image in characterData[actors[0].charId].images)
+            {
+                if (image.id != null && image.id == actors[0].charImgId)
+                {
+                    avartarPanel1.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                    break;
+                }
+                else
+                {
+                    avartarPanel1.GetComponent<Image>().sprite = null;
+                }
+            }
+            avartarPanel1.GetComponent<Image>().color = !actors[0].actFlg ? new Color(0.6f, 0.6f, 0.6f, 1f) : new Color(1f, 1f, 1f, 1f);
+        }
+
+        if (characterData.ContainsKey(actors[1].charId))
+        {
+            foreach (AvatarImage image in characterData[actors[1].charId].images)
+            {
+                if (image.id != null && image.id == actors[1].charImgId)
+                {
+                    avartarPanel2.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                    break;
+                }
+                else
+                {
+                    avartarPanel2.GetComponent<Image>().sprite = null;
+                }
+            }
+            avartarPanel2.GetComponent<Image>().color = !actors[1].actFlg ? new Color(0.6f, 0.6f, 0.6f, 1f) : new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
     void EndDialogue()
     {
         currentLineIndex += 1;
         dialogueText.text = "The End.";
-        Destroy(avartarPanel);
+        Destroy(avartarPanel1);
+        Destroy(avartarPanel2);
         Destroy(choicesContainer.gameObject);
         Destroy(characterNameText);
     }

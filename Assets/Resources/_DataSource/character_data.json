@@ -1,6 +1,28 @@
 {
   "characters": [
     {
+      "id": "Shdw1",
+      "name": "The Man",
+      "images": [
+        {
+          "id": "00",
+          "path": "Art/Character/Lor/Lor_Draft"
+        }
+      ],
+      "description": "Sienna has a radiant complexion, her warm bronze skin glowing under any light. Her thick, jet-black curls fall in a cascade down her back, framing her heart-shaped face."
+    },
+    {
+      "id": "Shdw2",
+      "name": "The Woman",
+      "images": [
+        {
+          "id": "00",
+          "path": "Art/Character/unknow/The_Woman"
+        }
+      ],
+      "description": "Sienna has a radiant complexion, her warm bronze skin glowing under any light. Her thick, jet-black curls fall in a cascade down her back, framing her heart-shaped face."
+    },
+    {
       "id": "lor",
       "name": "Lor",
       "images": [
@@ -25,17 +47,6 @@
         }
       ],
       "description": "Broad-shouldered and towering at nearly 6’5\", Alyssa has the build of a man carved from stone. His jawline is sharp, his cheekbones high, and a neatly trimmed beard frames his face with a salt-and-pepper ruggedness. "
-    },
-    {
-      "id": "Shdw1",
-      "name": "The Man",
-      "images": [
-        {
-          "id": "00",
-          "path": "Art/Character/unknow/The_Men"
-        }
-      ],
-      "description": "Sienna has a radiant complexion, her warm bronze skin glowing under any light. Her thick, jet-black curls fall in a cascade down her back, framing her heart-shaped face."
     }
   ]
 }
