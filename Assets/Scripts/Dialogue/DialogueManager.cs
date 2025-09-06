@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject DialogueScene;
+    public GameObject Cutscene;
+
     public TextMeshProUGUI characterNameText;
     public GameObject avartarPanel1;
     public GameObject avartarPanel2;
@@ -32,7 +35,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueFilePath != "")
         {
-            DisplayLine();
+            DialogueLine currentLine = dialogueFile.lines[currentLineIndex];
+            StartDialogue();
+            //if (currentLine.type == "dialogue")
+            //{
+            //    StartDialogue();
+            //}
         }
     }
 
@@ -76,7 +84,7 @@ public class DialogueManager : MonoBehaviour
 
         if (currentLine.choices != null && currentLine.nextLineIndex >= 0 && currentLine.choices.Count == 0)
         {
-            OnChoiceSelected(currentLine.nextLineIndex + currentLineIndex);
+            ProceedToNextLine(currentLine.nextLineIndex + currentLineIndex);
             return;
         }
 
@@ -87,12 +95,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void OnChoiceSelected(int nextLineIndex)
+    void ProceedToNextLine(int nextLineIndex)
     {
         if (nextLineIndex > 0 && nextLineIndex < dialogueFile.lines.Count)
         {
             currentLineIndex = nextLineIndex;
-            DisplayLine();
+            StartDialogue();
+            //if (currentLine.type == "dialogue")
+            //{
+            //    Cutscene.SetActive(false);
+            //    DialogueScene.SetActive(true);
+            //    StartDialogue();
+            //}
         }
         else
         {
@@ -100,9 +114,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void DisplayLine()
+    void StartDialogue()
     {
-        // Clear previous choices
         foreach (Transform child in choicesContainer)
         {
             Destroy(child.gameObject);
@@ -111,7 +124,51 @@ public class DialogueManager : MonoBehaviour
         DialogueLine line = dialogueFile.lines[currentLineIndex];
         dialogueText.text = line.text;
 
-        GetActorsInfo(line);
+        List<Actor> actors = line.actors;
+        CharacterData character1 = characterData[actors[0].charId];
+        CharacterData character2 = characterData[actors[1].charId];
+        if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
+        {
+            characterNameText.text = "";
+        }
+        else
+        {
+            characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
+        }
+
+        if (characterData.ContainsKey(actors[0].charId))
+        {
+            foreach (AvatarImage image in characterData[actors[0].charId].images)
+            {
+                if (image.id != null && image.id == actors[0].charImgId)
+                {
+                    avartarPanel1.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                    break;
+                }
+                else
+                {
+                    avartarPanel1.GetComponent<Image>().sprite = null;
+                }
+            }
+            avartarPanel1.GetComponent<Image>().color = !actors[0].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
+        }
+
+        if (characterData.ContainsKey(actors[1].charId))
+        {
+            foreach (AvatarImage image in characterData[actors[1].charId].images)
+            {
+                if (image.id != null && image.id == actors[1].charImgId)
+                {
+                    avartarPanel2.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
+                    break;
+                }
+                else
+                {
+                    avartarPanel2.GetComponent<Image>().sprite = null;
+                }
+            }
+            avartarPanel2.GetComponent<Image>().color = !actors[1].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
+        }
 
         if (line.choices != null && line.choices.Count > 0)
         {
@@ -122,69 +179,10 @@ public class DialogueManager : MonoBehaviour
                 btnText.text = choice.text;
 
                 Button btn = choiceObj.GetComponent<Button>();
-                btn.onClick.AddListener(() => OnChoiceSelected(choice.nextLineIndex + currentLineIndex));
+                btn.onClick.AddListener(() => ProceedToNextLine(choice.nextLineIndex + currentLineIndex));
             }
         }
-    }
 
-    void GetActorsInfo(DialogueLine line)
-    {
-        List<Actor> actors = line.actors;
-        CharacterData character1 = characterData[actors[0].charId];
-        CharacterData character2 = characterData[actors[1].charId];
-
-        //if (actors.Count == 0)
-        //{
-        //    characterNameText.text = "";
-        //    characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
-
-        //}
-        //else
-        //{
-            if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
-            {
-                characterNameText.text = "";
-            }
-            else
-            {
-                characterNameText.text = actors[0].actFlg ? character1.name : actors[1].actFlg ? character2.name : "Unknown";
-            }
-
-            if (characterData.ContainsKey(actors[0].charId))
-            {
-                foreach (AvatarImage image in characterData[actors[0].charId].images)
-                {
-                    if (image.id != null && image.id == actors[0].charImgId)
-                    {
-                        avartarPanel1.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
-                        break;
-                    }
-                    else
-                    {
-                        avartarPanel1.GetComponent<Image>().sprite = null;
-                    }
-                }
-                avartarPanel1.GetComponent<Image>().color = !actors[0].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
-            }
-
-            if (characterData.ContainsKey(actors[1].charId))
-            {
-                foreach (AvatarImage image in characterData[actors[1].charId].images)
-                {
-                    if (image.id != null && image.id == actors[1].charImgId)
-                    {
-                        avartarPanel2.GetComponent<Image>().sprite = Resources.Load<Sprite>(image.path);
-                        break;
-                    }
-                    else
-                    {
-                        avartarPanel2.GetComponent<Image>().sprite = null;
-                    }
-                }
-                avartarPanel2.GetComponent<Image>().color = !actors[1].actFlg ? new Color(0.3f, 0.3f, 0.3f, 1f) : new Color(1f, 1f, 1f, 1f);
-            }
-        //}
-        
     }
 
     void EndDialogue()

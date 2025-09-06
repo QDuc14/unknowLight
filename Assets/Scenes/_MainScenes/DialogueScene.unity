@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2431160601803303823, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4610045873909318252, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 601.2534
@@ -170,6 +174,14 @@ PrefabInstance:
     - target: {fileID: 5931975558743411168, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_Name
       value: DialogueObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875268086288352307, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_Name
+      value: DialogueScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875268086288352307, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8302529223405220179, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_Sprite

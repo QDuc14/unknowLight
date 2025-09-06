@@ -5,6 +5,8 @@ public class DialogueLine
 {
     public string text;
     public int nextLineIndex;
+    public string type; // dialogue, cutscene, etc...
+    public string pathImgBG;
     public List<Actor> actors;
     public List<DialogueChoice> choices;
 }
