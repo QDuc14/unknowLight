@@ -141,9 +141,22 @@ public class DialogueManager : MonoBehaviour
         typingCo = StartCoroutine(ShowDialogueText(dialogueText));
 
         List<Actor> actors = line.actors;
+
+        if (actors.Count == 0)
+        {
+            Color bgColor = new Color(0f, 0f, 0f, 0f);
+            characterNameText.text = "";
+            avartarPanel1.GetComponent<Image>().sprite = null;
+            avartarPanel2.GetComponent<Image>().sprite = null;
+            avartarPanel1.GetComponent<Image>().color = bgColor;
+            avartarPanel2.GetComponent<Image>().color = bgColor;
+            return;
+        }
+
         CharacterData character1 = characterData[actors[0].charId];
         CharacterData character2 = characterData[actors[1].charId];
-        if (actors.Count == 0 || (actors.Count == 1 && !actors[0].actFlg) || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
+
+        if (actors.Count == 1 && !actors[0].actFlg || actors.Count == 2 && !actors[0].actFlg && !actors[1].actFlg)
         {
             characterNameText.text = "";
         }

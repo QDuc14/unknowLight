@@ -71,18 +71,7 @@
     {
       "text": "A flash of light, followed by a deafening clap of thunder. The rain grew heavier and heavier, making the atmosphere of the conversation sink even deeper.",
       "nextLineIndex": 1,
-      "actors": [
-        {
-          "charId": "lor",
-          "charImgId": "01",
-          "actFlg": false
-        },
-        {
-          "charId": "verran",
-          "charImgId": "01",
-          "actFlg": false
-        }
-      ],
+      "actors": [],
       "choices": []
     },
     {
