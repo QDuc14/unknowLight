@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "text": "This place feels really cozy...",
+      "text": "This place feels really cozy... <link=\"blackCoffee\"><color=yellow><b>black coffee</b></color></link>",
       "nextLineIndex": 1,
       "actors": [
         {

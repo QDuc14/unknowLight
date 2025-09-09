@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,9 +7,12 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    // --- Public Variables ---
+    [Header("Scenes")]
     public GameObject DialogueScene;
     public GameObject Cutscene;
 
+    [Header("Dialogue Elements")]
     public TextMeshProUGUI characterNameText;
     public GameObject avartarPanel1;
     public GameObject avartarPanel2;
@@ -16,11 +20,15 @@ public class DialogueManager : MonoBehaviour
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
 
+    // --- Static Variables ---
     public static int currentLineIndex = 0;
     public static string dialogueFilePath = "";
 
+    // --- Private Variables ---
     private DialogueFile dialogueFile;
     private Dictionary<string, CharacterData> characterData;
+    private Coroutine typingCo;
+    private bool isTyping = false;
 
     void Awake()
     {
@@ -84,7 +92,13 @@ public class DialogueManager : MonoBehaviour
 
         if (currentLine.choices != null && currentLine.nextLineIndex >= 0 && currentLine.choices.Count == 0)
         {
-            ProceedToNextLine(currentLine.nextLineIndex + currentLineIndex);
+            if (isTyping)
+            {
+                RevealAllDialogueline(dialogueText);
+            }
+            else {
+                ProceedToNextLine(currentLine.nextLineIndex + currentLineIndex);
+            }
             return;
         }
 
@@ -123,6 +137,8 @@ public class DialogueManager : MonoBehaviour
 
         DialogueLine line = dialogueFile.lines[currentLineIndex];
         dialogueText.text = line.text;
+        isTyping = true;
+        typingCo = StartCoroutine(ShowDialogueText(dialogueText));
 
         List<Actor> actors = line.actors;
         CharacterData character1 = characterData[actors[0].charId];
@@ -193,5 +209,25 @@ public class DialogueManager : MonoBehaviour
         Destroy(avartarPanel2);
         Destroy(choicesContainer.gameObject);
         Destroy(characterNameText);
+    }
+
+    IEnumerator ShowDialogueText(TextMeshProUGUI TMP_UI)
+    {
+        TMP_UI.maxVisibleCharacters = 0;
+        string fullText = TMP_UI.text;
+
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            TMP_UI.maxVisibleCharacters = i + 1;
+            yield return new WaitForSeconds(0.02f);
+        }
+        isTyping = false;
+    }
+
+    void RevealAllDialogueline(TextMeshProUGUI TMP_UI)
+    {
+        if (typingCo != null) StopCoroutine(typingCo);
+        dialogueText.maxVisibleCharacters = TMP_UI.text.Length;
+        isTyping = false;
     }
 }
