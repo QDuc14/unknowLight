@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour, IPointerClickHandler
 {
     // --- Public Variables ---
     [Header("Scenes")]
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
     // --- Private Variables ---
     private DialogueFile dialogueFile;
     private Dictionary<string, CharacterData> characterData;
+    private Dictionary<string, KeywordData> keywordLookup;
     private Coroutine typingCo;
     private bool isTyping = false;
 
@@ -35,7 +37,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueFilePath != "")
         {
             LoadDialogue(dialogueFilePath);
-            LoadData("_DataSource/character_data");
+            LoadData("_DataSource/character_data", "_DataSource/keyword_test");
         }
     }
 
@@ -51,6 +53,10 @@ public class DialogueManager : MonoBehaviour
             //}
         }
     }
+    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
+    {
+        HandleDialogueSystem();
+    }
 
     void LoadDialogue(string path)
     {
@@ -58,13 +64,20 @@ public class DialogueManager : MonoBehaviour
         TextAsset jsonText = Resources.Load<TextAsset>(path); // TextAsset is a Unity type used to store text data, such as .txt, .json, or .csv files.
         dialogueFile = JsonUtility.FromJson<DialogueFile>(jsonText.text); // jsonText.text retrieves the entire text content of the file as a string, ready for parsing.
     }
-    void LoadData(string characterDataPath)
+    void LoadData(string characterDataPath, string keyWordDataPath)
     {
         LoadCharacterData(characterDataPath); // Load character data from the specified path.
+        LoadKeywordDatabase(keyWordDataPath);
     }
     void LoadCharacterData(string path)
     {
         TextAsset characterJson = Resources.Load<TextAsset>(path);
+        if (characterJson == null)
+        {
+            Debug.LogError("Character JSON not found at " + path);
+            return;
+        }
+
         CharacterDatabase characterDb = JsonUtility.FromJson<CharacterDatabase>(characterJson.text);
         characterData = new Dictionary<string, CharacterData>();
         foreach (var character in characterDb.characters)
@@ -72,7 +85,25 @@ public class DialogueManager : MonoBehaviour
             characterData[character.id] = character;
         }
     }
-    public void HandleDialogueSystem()
+    void LoadKeywordDatabase(string path)
+    {
+        TextAsset json = Resources.Load<TextAsset>(path); // Adjust if needed
+        if (json == null)
+        {
+            Debug.LogError("Keyword JSON not found at " + path);
+            return;
+        }
+
+        KeywordDatabase db = JsonUtility.FromJson<KeywordDatabase>(json.text);
+        keywordLookup = new Dictionary<string, KeywordData>();
+        foreach (var keyword in db.keywords)
+        {
+            keywordLookup[keyword.id] = keyword;
+        }
+
+        Debug.Log($"Loaded {keywordLookup.Count} keywords.");
+    }
+    void HandleDialogueSystem()
     {
         // Check if dialogueFile is loaded and has lines
         if (dialogueFile == null || dialogueFile.lines == null || dialogueFile.lines.Count == 0 || currentLineIndex >= dialogueFile.lines.Count)
@@ -87,6 +118,7 @@ public class DialogueManager : MonoBehaviour
         int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
         if (linkIndex != -1)
         {
+            KeyWordOnPressed();
             return;
         }
 
@@ -242,5 +274,52 @@ public class DialogueManager : MonoBehaviour
         if (typingCo != null) StopCoroutine(typingCo);
         dialogueText.maxVisibleCharacters = TMP_UI.text.Length;
         isTyping = false;
+    }
+
+    void KeyWordOnPressed()
+    {
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(dialogueText, Mouse.current.position.ReadValue(), null);
+
+        if (linkIndex != -1)
+        {
+            TMP_LinkInfo linkInfo = dialogueText.textInfo.linkInfo[linkIndex];
+            string clickedID = linkInfo.GetLinkID();
+            Debug.Log("Clicked on keyword: " + clickedID);
+
+            OnWordClicked(clickedID);
+        }
+    }
+    void OnWordClicked(string id)
+    {
+        if (!keywordLookup.ContainsKey(id))
+        {
+            Debug.LogWarning($"No keyword entry found for: {id}");
+            return;
+        }
+
+        KeywordData keyword = keywordLookup[id];
+
+        switch (keyword.action)
+        {
+            case "ShowProfile":
+                ShowProfile(keyword);
+                break;
+            case "ShowDetail":
+                ShowDetail(keyword);
+                break;
+            default:
+                Debug.Log($"Keyword clicked: {keyword.display}");
+                break;
+        }
+    }
+
+    void ShowProfile(KeywordData data)
+    {
+        Debug.Log($"Profile: {data.display}\n{data.description}");
+    }
+
+    void ShowDetail(KeywordData data)
+    {
+        Debug.Log($"Tooltip: {data.description}");
     }
 }
