@@ -1,0 +1,97 @@
+{
+  "lines": [
+    {
+      "text": "\"There are no good or bad people, only souls chasing their own desires. And sometimes, the only thing standing in their way... is humanity itself.\"",
+      "type": "blackScreen",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "Greytear City, the city of ambition and luxury, where people are willing to sell their own kin just to fulfill their desires.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/nightcitybg",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "As a city situated between the borders of three countries, it is the home to all kinds of people: from the wealthy, who use money to bend the law as they see fit, to the poor, who leave their hometowns in pursuit of feeding their families.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/nightcitybg",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "The city promises all, but also takes all, regardless of who you are.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/nightcitybg",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "The city promises all, but also takes all, regardless of who you are. With its Victorian architecture and rows of neatly packed houses, it is a nest for criminals to thrive under the night’s veil.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/nightcitybg",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "Still, in a small corner of Greytear, one place remains open, its dim yellow light flickering in the night like the ray of sunshine right after a heavy rain.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/nightcitybg",
+      "nextLineIndex": 1
+    },
+    {
+      "text": "Another quiet evening,",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/BG",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": true
+        }
+      ]
+    },
+    {
+      "text": "It wasn’t because he hated the dull atmosphere, which was amplified by the sound of raindrops gently brushing against the windows.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/BG",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        }
+      ]
+    },
+    {
+      "text": "No, he was waiting for something… something that even his heart had yet to recognize.",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/BG",
+      "nextLineIndex": 999999999,
+      "actors": [
+        {
+          "charId": "lor",
+          "charImgId": "01",
+          "actFlg": false
+        }
+      ]
+    },
+    {
+      "text": "",
+      "type": "dialogue",
+      "pathImgBG": "Art/Sample/BG",
+      "nextLineIndex": 1,
+      "actors": [
+        {
+          "charId": "",
+          "charImgId": "01",
+          "actFlg": false
+        },
+        {
+          "charId": "",
+          "charImgId": "01",
+          "actFlg": false
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

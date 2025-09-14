@@ -66,7 +66,7 @@ public class GameDataManager : MonoBehaviour
 
     public static void NewGame() // call from onClick event in the UI to start a new game
     {
-        DialogueManager.dialogueFilePath = "Dialogue/sample_dialogue";
+        DialogueManager.dialogueFilePath = "Dialogue/Demo/Demo_0.0.1a";
         DialogueManager.currentLineIndex = 0;
         SceneManager.LoadScene("DialogueScene"); 
     }
