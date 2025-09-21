@@ -201,7 +201,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         DialogueScene.GetComponent<Image>().sprite = Resources.Load<Sprite>(line.pathImgBG);
 
         List<Actor> actors = line.actors;
-        Color bgColor = new Color(0f, 0f, 0f, 0f);
+        Color bgColor = new (0f, 0f, 0f, 0f);
 
         characterNameText.text = "";
         avartarPanel1.GetComponent<Image>().sprite = null;
