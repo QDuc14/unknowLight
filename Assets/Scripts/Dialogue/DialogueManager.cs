@@ -263,12 +263,8 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
     void EndDialogue()
     {
-        currentLineIndex += 1;
-        dialogueText.text = "The End.";
-        Destroy(avartarPanel1);
-        Destroy(avartarPanel2);
-        Destroy(choicesContainer.gameObject);
-        Destroy(characterNameText);
+        return;
+        //DialogueBridge.CloseDialogue();
     }
 
     IEnumerator ShowDialogueText(TextMeshProUGUI TMP_UI)

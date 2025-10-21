@@ -16,11 +16,13 @@ public class CounterCustomerFSM : MonoBehaviour
     [Header("Marker & UX")]
     public GameObject marker;              // child with ClickMarker
     public string drinkName = "House Ale";
-    public float showSeconds = 2f;
+    public float showSeconds = 5f;
 
     [Header("Scene Jump")]
     public SequenceMode sequence = SequenceMode.OrderThenTalk;
-    public string sceneToLoad = "";        // target scene (must be in build settings)
+    [Tooltip("Dialogue scene name (must be in Build Settings)")]
+    public string sceneToLoad = "DialogueScene";
+    public string dialogueFilePath = "";
 
     WaypointMover mover;
     ClickMarker click;
@@ -91,9 +93,7 @@ public class CounterCustomerFSM : MonoBehaviour
     {
         if (state != State.WaitingForClick) return;
 
-        // Hide marker so it can’t be clicked twice
-        if (marker) marker.SetActive(false);
-
+        if (marker) marker.SetActive(false);   // prevent double clicks
         state = State.ExecutingActions;
         StartCoroutine(RunSequenceThenLeave());
     }
@@ -109,17 +109,17 @@ public class CounterCustomerFSM : MonoBehaviour
                 break;
 
             case SequenceMode.TalkOnly:
-                JumpScene();
+                yield return OpenDialogueAndWait(sceneToLoad);
                 break;
 
             case SequenceMode.OrderThenTalk:
                 ShowDrink();
                 yield return new WaitForSeconds(showSeconds);
-                JumpScene();
+                yield return OpenDialogueAndWait(sceneToLoad);
                 break;
 
             case SequenceMode.TalkThenOrder:
-                JumpScene();
+                yield return OpenDialogueAndWait(sceneToLoad);
                 ShowDrink();
                 yield return new WaitForSeconds(showSeconds);
                 break;
@@ -152,12 +152,24 @@ public class CounterCustomerFSM : MonoBehaviour
         if (DrinkUI.I != null && !string.IsNullOrEmpty(drinkName))
             DrinkUI.I.Show(drinkName, showSeconds);
     }
-
-    void JumpScene()
+    
+    IEnumerator OpenDialogueAndWait(string dialogueSceneName)
     {
-        if (!string.IsNullOrEmpty(sceneToLoad))
-            SceneManager.LoadScene(sceneToLoad);
-        // If using async:
-        // StartCoroutine(SceneManager.LoadSceneAsync(sceneToLoad));
+        if (string.IsNullOrEmpty(dialogueSceneName))
+            yield break;
+
+        DialogueManager.dialogueFilePath = dialogueFilePath;
+        DialogueManager.currentLineIndex = 0;
+        var load = SceneManager.LoadSceneAsync(dialogueSceneName, LoadSceneMode.Additive);
+        while (!load.isDone) yield return null;
+
+        bool done = false;
+        void Handler() { done = true; }
+        DialogueBridge.OnDialogueClosed += Handler;
+        while (!done) yield return null;
+        DialogueBridge.OnDialogueClosed -= Handler;
+
+        var unload = SceneManager.UnloadSceneAsync(dialogueSceneName);
+        while (!unload.isDone) yield return null;
     }
 }
