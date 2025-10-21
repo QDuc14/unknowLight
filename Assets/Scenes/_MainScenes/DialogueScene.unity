@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184585563513638280, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1800
+      objectReference: {fileID: 0}
     - target: {fileID: 2431160601803303823, guid: 3d96429061dfaed49b5169f0ed6575b4, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
